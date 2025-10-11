@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACTE</title>
+    <link rel="stylesheet" href="global.css">
 </head>
 <body>
+    <header class="header">
+        <nav class="nav">
+            <div></div>
+            <ul class="links">
+                <li><a href="./index.html">Inici</a></li>
+                <li><a href="./productes.html">Productes</a></li>
+                <li><a href="./contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h1 style="margin: 16px 0 8px;">Contacte</h1>
+            <p style="color: rgb(28, 28, 27); margin:0;">Per a qualsevol consulta contacta amb nosaltres</p>
+        </section>
+
+        <section class="contact-wrapper">
+            <div class="card" style="padding: 16px;">
+                <h2 style="margin-top: 0;">Envian's un missatge</h2>
+                <label>
+                    Nom:          
+                    <input type="text" name="nom" placeholder="Escriu el teu nom"/>
+                </label>
+                <label>
+                    Email: 
+                    <input type="email" placeholder="email@email.com"/>
+                </label>
+                
+                <label>
+                    Telèfon: 
+                    <input type="tel" placeholder="+34 600 000 000"/>
+                </label>
+                <br>
+                <br>
+                <label>
+                    Missatge:
+                    <textarea name="missatge" placeholder="Escreiu aquí..."></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </label>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
     
 </body>
 </html>
