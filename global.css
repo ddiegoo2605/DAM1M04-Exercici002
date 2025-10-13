@@ -113,6 +113,7 @@ main{
     transform: translateY(-10px);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
 }
+/*FOOTER*/
 .footer{
     background-color: black;
     color: azure;
