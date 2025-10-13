@@ -1,3 +1,5 @@
+
+/* REGLES COMUNS*/
 html, body{
     height: 100%;
     margin: 0px;
@@ -5,23 +7,32 @@ html, body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 main{
-    flex:1;
-    margin: 70px;
+    flex: 1;
+    padding: 0 16px;
+    margin: 90px auto 70px;
+    box-sizing: border-box;
+    max-width: 1100px;
 }
+
 
 .header{
     position: fixed;
     margin:0;
     width: 100%;
-    background-color: rgb(63, 192, 149);
+    background-color: #34b68d;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    z-index: 9999;
+    overflow: hidden;
 }
 
 .nav{
-    width: min(95%);
+    width:100%;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -31,12 +42,10 @@ main{
 }
 .links{
     display: flex;
-    text-decoration: none;
     gap: 20px;
     list-style: none;
     margin: 0;
     padding:0;
-    ;
 }
 
 .links a{
@@ -51,46 +60,20 @@ main{
     background-color: rgb(137, 188, 171);
 }
 
-.hero{
-    width:100%;
-    max-width: 1100px;
-    margin:0 auto;
-    padding: 48px 16px;
-    background: linear-gradient(180deg, #34b68d, #ffffff);
-    border-radius: 15px;
-}
-
-.hero h1{
-    margin: 0 0 8px 0;
-    font-size: 40px;
-    text-align: center;
-}
-.hero p{
-    margin-top: 0;
-    text-align: center;
-    
-}
-
 .section{
-    width: min(1100px,);
-    margin-top: 32px;
-    padding:13px;
+    max-width: 1100px;
+    margin: 32px auto 0;
+    padding:13px 16px;
+    text-align: center;
 }
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 16px;
-    align-items: stretch;
-}
-
 .card{
-    background: var(--card);
-    border: 8px solid rgb(0, 0, 0);
+    border: 4px solid rgb(0, 0, 0);
     margin-bottom: 20px;
     border-radius: 12px;
     padding: 15px;
     display: grid;
     box-shadow: 18px 18px 18px;
+    background-color: #34b68d;
 }
 .card h3{
     text-align: center;
@@ -100,9 +83,7 @@ main{
     padding-bottom: 4px;
     margin-bottom: 8px;
 }
-
-
-.card .ph{
+.card .foto{
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
@@ -115,13 +96,28 @@ main{
     background: none;
 
 }
-
-.site-footer{
+.botón{
+    appearance: none;
+    border: 3;
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 1000;
+    cursor: pointer;
+    margin-top: 12px;
+    justify-self: center;          
+    box-shadow: 0 6px 18px rgba(0,0,0,.10);
+}
+.botón:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+}
+.footer{
     background-color: black;
     color: azure;
     padding: 15px;
     font-size: 16px;
-    border-radius: 10px;
     width: 100%;
 
 }
@@ -134,11 +130,14 @@ main{
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
-
+    font-weight: 700;
 }
+
+
 .contacte a{
-    text-decoration: none;
-    color: azure;
+    text-decoration:solid;
+    font-weight: 700;
+    color: rgb(249, 249, 249);
 }
 
 
@@ -150,80 +149,29 @@ main{
     padding: 0;
 }
 .xarxes a{
-    color: rgb(243, 243, 243);
-    text-decoration: none;
+    color: rgb(243, 243, 243);text-decoration: none;
 }
-.section{text-align: center;}
-
-/* Contenedor centrado con GRID de 2 columnas */
-.formulari_contacte{
-    display: grid;
-    width: 100%;
+/* PAGINA INICI */
+.hero{
+    width:100%;
     max-width: 1100px;
-    margin: 10px auto 30px;   /* centrado: max-width + auto */
-    grid-template-columns: 1fr 1fr; /* A (form) / B (info) */
-    gap: 16px;
-    align-items: stretch;      /* iguala alturas */
+    margin:24px auto;
+    padding: 48px 16px;
+    background: linear-gradient(180deg, #34b68d, #ffffff);
+    border-radius: 15px;
     text-align: center;
 }
 
-/* Cards SIN flex: grid interno por filas (título / contenido / pie) */
-.formulari_contacte > .card{
+.hero h1{margin: 0 0 8px 0; font-size: 40px;}
+.hero p{margin-top: 0;}
+
+.grid{
     display: grid;
-    grid-auto-rows: auto;
-    min-height: 420px;         /* mismo alto visual */
-    box-sizing: border-box;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+    align-items: stretch;
 }
 
-/* Campos del formulario al 100% */
-.formulari_contacte input,
-.formulari_contacte textarea{
-    width: 100%;
-    max-width: 420px;
-    margin-top: 4px;
-    margin-bottom: 8px;
-    padding: 6px;
-}
-
-/* Mapa ficticio */
-.mapa{
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border: 3px solid #000000;
-    border-radius: 8px;
-    display: block;
-}
-
-/* Responsive: apilar en pantallas pequeñas */
-@media (max-width: 768px){
-.formulari_contacte{
-    grid-template-columns: 1fr;
-}
-}
-.formulari_contacte .card h2 { text-align:center; }
-.formulari_contacte .card { text-align:center; }
-
-/* Espaciado limpio entre campos */
-.formulari_contacte .card label{
-    display:block;
-    margin:12px 0;          /* controla el “margen” entre Nom / Email / etc */
-}
-
-/* Inputs al 100% del contenedor */
-.formulari_contacte input,
-.formulari_contacte textarea{
-    width:100%;
-    max-width:none;         /* opcional: quita el 420px si quieres que llenen toda la card */
-    box-sizing:border-box;
-}
-.formulari_contacte label{
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 10px;
-    align-items: center;
-    margin: 0;              /* que no meta márgenes raros */
-}
 .tags{
     display: flex;
     flex-wrap: wrap;
@@ -235,27 +183,200 @@ main{
     font-size: 12px;
     font-weight: 700;
     padding: 4px 8px;
-    background: #3dc897;
+    background: #fcfcfc;
     border: 2px solid #1a1a1a;
     border-radius: 999px;
 }
-.benefits {
+
+.beneficis {
     max-width: 1100px;
-    margin: 24px auto 0;
+    margin: 24px auto 10px;
     padding: 10px 14px;
-    display: flex;                     /* ✔ requisito: flex horizontal */
+    display: flex;                     
     gap: 12px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #34b68d, #ffffff);
-    border: 0px solid #0b0b0b;
+    background: #34b68d;
+    border: 3px solid #000000;
     border-radius: 12px;
     font-weight: 700;
+}
+.beneficis span::after{content:"·";margin: 0 15px;color:#000000;}
+.beneficis span:last-child::after{ content:""; }
+
+
+/*PAGINA PRODUCTES*/
+.filtre_productes{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 12px 0 16px;
+    font-weight: 700;
+    justify-content: center;
+    max-width: 1100px;
+    text-align: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+.filtre_productes a, 
+.filtre_productes span{
+    display: inline-block;
+    text-decoration: none;
+    color: #111;
+    padding: 6px 10px;
+    border: 2px solid #000000;
+    border-radius: 999px;
+    background: #34b69d;
+}
+.filtre_productes a:hover{background: #cac0c0;}
+
+.producte-grid{
+    display: flex;          
+    flex-wrap: wrap;        
+    gap: 16px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;  
+    justify-content: center;            
+}
+.product{
+    box-sizing: border-box;
+    flex: 0 0 calc((100% - 2*16px)/3);
+    max-width: calc((100% - 2*16px) / 3);        
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #111;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 18px 20px rgba(0, 0,0);
+    background-color: #34b68d;
+}
+.product .foto{
+    height: 200px;          
+    background: #e5e5e5;
+    border: 3px solid #000;
+    border-radius: 10px;
     margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
 }
-.benefits span::after{
-    content:"·";
-    margin: 0 8px;
-    color:#b2a4a4;
+.product .foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:flexbox;
+    border: #000;
+    border-radius: 10px;
 }
-.benefits span:last-child::after{ content:""; }
+.product .nom{font-weight: 700; margin: 6px 0 4px; }
+.product .preu{
+    margin-top: auto;       
+    font-weight: 800;
+    font-size: 18px;
+}
+@media (max-width: 900px){
+    .product{
+    flex: 0 0 calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
+    }
+}
+@media (max-width: 560px){
+    .product{
+    flex: 0 0 100%;
+    max-width: 100%;
+    }
+}
+/* PAGINA CONTACTE*/
+.formulari_contacte{
+    display: grid;
+    width: 100%;
+    max-width: 1100px;
+    margin: 10px auto 30px;   
+    grid-template-columns: 1fr 1fr; 
+    gap: 16px;
+    align-items: stretch;      
+    text-align: center;
+}
+
+
+.formulari_contacte > .card{
+    display: grid;
+    grid-auto-rows: auto;
+    min-height: 420px;         
+    box-sizing: border-box;
+}
+.formulari_contacte .card h2 { text-align:center; }
+.formulari_contacte .card { text-align:center; }
+
+.formulari_contacte label{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    align-items: center;
+    margin: 0;              
+}
+
+.formulari_contacte input,
+.formulari_contacte textarea{
+    width: 100%;
+    max-width: 420px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding: 6px;
+    border: 3PX solid;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0);
+}
+
+
+.formulari_contacte input:placeholder-shown,
+.formulari_contacte textarea:placeholder-shown{text-align: center;}
+.submit{
+    border: 3px solid;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0);
+    border-radius: 20px;
+
+}
+.mapa{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    display: block;
+    
+}
+.formulari_contacte .card label{
+    display:block;
+    margin:12px 0;          
+}
+
+
+@media (max-width: 768px){
+.formulari_contacte{
+    grid-template-columns: 1fr;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
