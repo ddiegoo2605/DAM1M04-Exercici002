@@ -24,8 +24,8 @@ main{
     margin:0;
     width: 100%;
     background-color: #34b68d;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
     z-index: 9999;
     overflow: hidden;
 }
