@@ -336,7 +336,7 @@ main{
 }
 
 
-.formulari_contacte input:placeholder-shown,                        /*DISSENY INPUTS CENTRATS*/
+.formulari_contacte input:placeholder-shown,        /*DISSENY INPUTS CENTRATS*/
 .formulari_contacte textarea:placeholder-shown{text-align: center;}
 .submit{
     border: 3px solid;
