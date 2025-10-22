@@ -175,13 +175,16 @@ main{
     border-color: #000;
     translate: initial;
     text-decoration: none;
+    color: #000000;
 
 }
 
-.boto_hero a:hover{
+.boto_hero:hover{
     background-color:#7ccf8e ;
     color: #000;
     text-decoration: none;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
     
 }
 
